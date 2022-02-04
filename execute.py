@@ -1,9 +1,10 @@
 from origin import retinex
 import cv2
 import matplotlib.pyplot as plt
+import os 
 
-
-img=cv2.imread(r'C:\Users\Abolfazl\Desktop\Retinex-master\14_indoor_hazy.jpg')
+image_path=os.path.join(os.getcwd(),'screenshot.jpg')
+img=cv2.imread(image_path)
 r=retinex(img)
 
 #cv2.imshow('MSRCP',r.MSRCP([10,12,14,16],0.01,0.99))
@@ -18,9 +19,6 @@ r=retinex(img)
 # code for displaying multiple images in one figure
 
 #import libraries
-import cv2
-from matplotlib import pyplot as plt
-
 # create figure
 fig = plt.figure(figsize=(30,30))
 
